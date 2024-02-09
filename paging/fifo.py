@@ -29,4 +29,4 @@ for i in range(len(order)):
         print_state(i, ram_frames, [order[i]], [order[i]], [to_remove])
 
 print(f"Количество замен: {swap_cnt}")
-print(f"Page fault: {swap_cnt / len(order)}%")
+print(f"Page fault: {swap_cnt / len(order) * 100}%")
