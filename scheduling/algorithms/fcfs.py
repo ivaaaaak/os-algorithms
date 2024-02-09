@@ -6,6 +6,9 @@ class FCFS(Algorithm):
     def __init__(self):
         super().__init__()
 
+    def __str__(self):
+        return "FCFS"
+
     def start_task_on_cpu(self, tick_num):
         while len(self.CPU_queue) != 0:
             cpu_num = self.find_free_cpu(tick_num)

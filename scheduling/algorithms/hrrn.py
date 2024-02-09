@@ -7,6 +7,9 @@ class HRRN(Algorithm):
         super().__init__()
         self.wait_time = [0] * 6
 
+    def __str__(self):
+        return "HRRN"
+
     def start_task_on_cpu(self, tick_num):
         while len(self.CPU_queue) != 0:
             cpu_num = self.find_free_cpu(tick_num)

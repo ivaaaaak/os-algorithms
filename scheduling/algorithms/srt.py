@@ -6,6 +6,9 @@ class SRT(Algorithm):
     def __init__(self):
         super().__init__()
 
+    def __str__(self):
+        return "SRT"
+
     def start_task_on_cpu(self, tick_num):
 
         while len(self.CPU_queue) != 0:

@@ -10,6 +10,8 @@ from scheduling.algorithms.srt import SRT
 
 
 def print_result(algorithm):
+    print(f"\n{algorithm}\n")
+
     t = Texttable()
     t.set_deco(Texttable.HEADER | Texttable.BORDER)
     t.add_row(['time', 'CPU1', 'CPU2', 'CPU3', 'CPU4', 'IO1', 'IO2'])
@@ -41,32 +43,26 @@ def print_result(algorithm):
 
 
 def main(task_file):
-    print("\nFCFS\n")
     f = FCFS()
     f.process_scheduling(task_file)
     print_result(f)
 
-    print("\nRR(1)\n")
     rr = RR(1)
     rr.process_scheduling(task_file)
     print_result(rr)
 
-    print("\nRR(4)\n")
     rr = RR(4)
     rr.process_scheduling(task_file)
     print_result(rr)
 
-    print("\nSPN\n")
     spn = SPN()
     spn.process_scheduling(task_file)
     print_result(spn)
 
-    print("\nSRT\n")
     srt = SRT()
     srt.process_scheduling(task_file)
     print_result(srt)
 
-    print("\nHRRN\n")
     hrrn = HRRN()
     hrrn.process_scheduling(task_file)
     print_result(hrrn)
